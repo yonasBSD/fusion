@@ -7,7 +7,6 @@ export default defineConfig({
 	define: {
 		'import.meta.env.FUSION': JSON.stringify({
 			version:
-				execSync('git describe --tags --abbrev=0').toString().trimEnd() ||
 				execSync('git rev-parse --short HEAD').toString().trimEnd()
 		})
 	},

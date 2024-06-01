@@ -4,7 +4,7 @@ build() {
 	root=$(pwd)
 	rm -r ./build
 	echo "building frontend"
-	cd ./frontend && npm i && npm run build || exit 1
+	cd ./frontend && yarn install && yarn build || exit 1
 	cd $root || exit 1
 	echo "building backend"
 	cp .env build/
